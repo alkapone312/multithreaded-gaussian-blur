@@ -1,17 +1,14 @@
 package test;
 
-import pl.pwr.jk.jni.Convolution;
-import pl.pwr.jk.jni.JavaConvolution;
-import pl.pwr.jk.jni.NativeConvolution;
+import pl.pwr.convolution.Convolution;
+import pl.pwr.convolution.SingleThreadConvolution;
 
 import java.util.Objects;
 
 public class ConvolutionTest extends AbstractTest {
     public static void runTests() {
-        testThatJavaConvolutionHaveCorrectValuesForSquareMatrix(new JavaConvolution());
-        testThatJavaConvolutionHaveCorrectValuesForSquareMatrix(new NativeConvolution());
-        testThatJavaConvolutionHaveCorrectValuesForNonSquareMatrix(new JavaConvolution());
-        testThatJavaConvolutionHaveCorrectValuesForNonSquareMatrix(new NativeConvolution());
+        testThatJavaConvolutionHaveCorrectValuesForSquareMatrix(new SingleThreadConvolution());
+        testThatJavaConvolutionHaveCorrectValuesForNonSquareMatrix(new SingleThreadConvolution());
     }
 
     public static void testThatJavaConvolutionHaveCorrectValuesForSquareMatrix(Convolution conv) {
