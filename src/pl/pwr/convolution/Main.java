@@ -37,7 +37,8 @@ public class Main {
         long startTime = System.nanoTime();
         Double[][] outputMatrix = convolution.calculateConvolution(imageMatrix, filter);
         long elapsedTime = System.nanoTime() - startTime;
-
+        double elapsedTimeMs = elapsedTime / 1_000_000.0;
+        System.out.println("Elapsed time:                   " + elapsedTimeMs + " ms");
         System.out.println("Elapsed time:                   " + (elapsedTime / 1000) + "us");
         System.out.println("File   name:                    " + args[0]);
         System.out.println("Filter name:                    " + args[1]);
