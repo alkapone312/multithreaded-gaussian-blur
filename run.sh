@@ -1,1 +1,1 @@
-java -Djava.library.path=. -cp bin pl.pwr.jk.jni.Main $@
+java -Djava.library.path=. -cp bin pl.pwr.convolution.Main $@
